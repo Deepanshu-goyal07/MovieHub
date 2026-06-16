@@ -41,8 +41,16 @@
     margin: 0 10px;
 }
 
-.movie_cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.movie_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+@media (min-width: 1200px) {
+    .movie_cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
