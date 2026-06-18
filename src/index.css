@@ -10,12 +10,37 @@
 
 }
 
-body{
-    background-color: #101010;
-    color: #fff;
-    font-family: "Imported font montserrat", sans-serif;
+:root {
+    --bg-color: #101010;
+    --text-color: #ffffff;
+    --navbar-border: #222222;
+    --navbar-link-color: #ffffff;
+    --select-bg: #222222;
+    --select-color: #ffffff;
+    --active-filter-border: #e6e6e6;
+    --card-shadow: rgba(0, 0, 0, 0.4);
+    --transition-speed: 0.3s;
 }
-.align_center{
+
+:root[data-theme='light'] {
+    --bg-color: #f8f9fa;
+    --text-color: #1a1a1a;
+    --navbar-border: #e6e6e6;
+    --navbar-link-color: #333333;
+    --select-bg: #ffffff;
+    --select-color: #1a1a1a;
+    --active-filter-border: #1a1a1a;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Imported font montserrat", sans-serif;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.align_center {
     display: flex;
     align-items: center;
     justify-content: center;

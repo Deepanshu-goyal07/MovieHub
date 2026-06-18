@@ -1,6 +1,7 @@
 import './Moviecard.css';
 import Star from '../../assets/star.png';
 
+// Represents a single movie card displaying its poster, title, rating, release date, and summary.
 const MovieCard = ({movie})=>{
     return(
         <a href="" className="movie_card">
