@@ -22,12 +22,12 @@ const Movielist = ({ searchQuery }) => {
     const fetchMovies = async (query) => {
         try {
             const apiQuery = query.trim() || "pokemon";
-            const response = await fetch(`http://www.omdbapi.com/?apikey=2af2560a&s=${encodeURIComponent(apiQuery)}`); 
+            const response = await fetch(`https://www.omdbapi.com/?apikey=2af2560a&s=${encodeURIComponent(apiQuery)}`); 
             const data = await response.json();
 
             if (data.Search) {
                 const detailPromises = data.Search.map(async (item) => {
-                    const detailResponse = await fetch(`http://www.omdbapi.com/?apikey=2af2560a&i=${item.imdbID}`);
+                    const detailResponse = await fetch(`https://www.omdbapi.com/?apikey=2af2560a&i=${item.imdbID}`);
                     const detailData = await detailResponse.json();
                     return {
                         id: item.imdbID,
